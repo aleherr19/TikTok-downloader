@@ -9,7 +9,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class TikTokDownloader{	
-	
+
 	//Class-wide variables
 	private int oldProg = 0;
 	private File fileLocation;
@@ -27,7 +27,7 @@ public class TikTokDownloader{
 		if (TikTokURL.contains("tiktok")) {
 			messageCallback("INIT", "It's a TikTok!");
 			//Find the video URL using this parser.
-			ParseTikTok("video_" + System.currentTimeMillis(), TikTokURL);
+			ParseTikTok(TikTokURL);
 		} else {
 			messageCallback("INIT", "It doens't look like this video is a TikTok!");
 		}
@@ -45,7 +45,7 @@ public class TikTokDownloader{
 
 	
 
-	private void ParseTikTok(String name, String url) throws Exception {
+	private void ParseTikTok(String url) throws Exception {
 
 		/*
 		 * Only used on android 8.0+ devices.
@@ -102,10 +102,10 @@ public class TikTokDownloader{
 		messageCallback("HTTPS", "Video URL located at: " + playHeader);
 		messageCallback("HTTPS","Starting download...");
 
-		Download(name, playHeader);
+		Download(playHeader);
 	}
 
-	private void Download(String name, String url) throws Exception {
+	private void Download(String url) throws Exception {
 		File videoFile = new File(fileLocation + ".mp4");
 		URL vidUrl = new URL(url);
 
