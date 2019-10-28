@@ -7,3 +7,5 @@ To download a tiktok, initialize the TikTokDownloaderV2 class with the required 
 
 Next, call the download method. It may throw exceptions, so use a try/catch block 
 ```ttd.download();```
+
+You can view an example in the ```Main.class``` file.
