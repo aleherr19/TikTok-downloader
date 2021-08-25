@@ -1,5 +1,9 @@
-# TikTok-downloader
+# TikTok-downloader (Doesn't work. Looking for a fix. 8/24/2021)
 
+
+Before you look any further, please note that this code does not work at this moment.
+
+...
 A simple java class that can parse and download a video from TikTok :)
 
 To download a tiktok, initialize the TikTokDownloaderV2 class with the required arguments.
